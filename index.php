@@ -57,23 +57,21 @@
 	}*/
 	
 	
+	$jsonArray[] = array();
 	for ($i=0; $i<5; $i++) {
 		$filename = "nav_".$i.".json";
 		if (file_exists($filename)) {
 
             // Get the JSON file
             $jsonContents = file_Get_contents($filename);
-
+			echo( $jsonContents );
             // Turn the JSON into a php array.
-            $jsonArray = json_decode($jsonContents,true);
-
-            // create and append the nav to the page.
-            $compiled = createNav($jsonArray, 0);
-			$compiledNav = $compiledNav + $compiled;
+            $jsonArray[$i] = json_decode($jsonContents,true); 
 		} 
-		
 	}
-	
+	// create and append the nav to the page.
+//$compiled = createNav($jsonArray, 0);
+//$compiledNav = $compiledNav + $compiled;
 	
 
 	// This function is used to create a nav

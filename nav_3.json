@@ -1,0 +1,71 @@
+{
+	"Government &amp; Research": {
+		"href": "http://labor.ny.gov",
+		"children": {
+			"Labor Statistics": {
+				"children": [{
+					"Labor Statistics Overview": {
+						"href": "http://labor.ny.gov/stats/index.shtm"
+					},
+					"Green Jobs Survey": {
+						"href": "http://labor.ny.gov/stats/green/index.shtm"
+					},
+					"Monthly Press Release - Local Area Unemployment Rates": {
+						"href": "http://labor.ny.gov/stats/pressreleases/prlaus.shtm"
+					},
+					"Monthly Press Release - Statewide Jobs Data": {
+						"href": "http://labor.ny.gov/stats/pressreleases/pruistat.shtm"
+					}
+				}]
+			},
+			"Workforce Investment Act": {
+				"children": [{
+					"Local Workforce Investment Boards": {
+						"href": "http://labor.ny.gov/workforcenypartners/lwia.shtm"
+					},
+					"State Workforce Investment Board": {
+						"href": "http://labor.ny.gov/workforce/swib/SWIBAbout.shtm"
+					}
+				}]
+			},
+			"Legal": {
+				"children": [{
+					"Overview": {
+						"href": "http://labor.ny.gov/legal/index.shtm"
+					},
+					"Adjudication Decisions": {
+						"href": "http://labor.ny.gov/legal/adjudication-decisions.shtm"
+					},
+					"Counsel Letters": {
+						"href": "http://labor.ny.gov/legal/counsel-opinion-letters.shtm"
+					},
+					"Frequently Asked Questions": {
+						"href": "http://labor.ny.gov/legal/frequently-asked-questions.shtm"
+					},
+					"Legal Updates": {
+						"href": "http://labor.ny.gov/legal/legal-updates.shtm"
+					},
+					"Workforce Professionals": {
+						"href": "http://labor.ny.gov/workforcenypartners/tools.shtm"
+					}
+				}]
+			},
+			"Public Work": {
+				"children": [{
+					"Overview": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PWContents.shtm"
+					},
+					"Article 8 - Construction": {
+						"href": "http://wpp.labor.state.ny.us/wpp/publicViewPWChanges.do?method=showIt"
+					},
+					"Article 9 - Building Services": {
+						"href": "http://wpp.labor.state.ny.us/wpp/publicViewPWChangesArt9.do?method=showIt"
+					},
+					"Debarred List": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PWDebarmentInformation.shtm"
+					}
+				}]
+			}
+		}
+	}
+}

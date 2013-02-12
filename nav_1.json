@@ -1,0 +1,216 @@
+{
+	"Individuals": {
+		"href": "http://labor.ny.gov/main/individuals.asp",
+		"children": {
+			"Job Seekers": {
+				"children": [{
+					"Job Seekers": {
+						"header": true
+					},
+					"Career Fairs and Recruitments": {
+						"href": "http://labor.ny.gov/careerservices/findajob/jobfairrecruitmentsindex.shtm"
+					},
+					"Find a Job": {
+						"href": "http://labor.ny.gov/careerservices/CareerServicesIndex.shtm"
+					},
+					"One-Stop Career Centers": {
+						"href": "http://labor.ny.gov/workforcenypartners/osview.asp"
+					},
+					"Apprenticeship": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/apprenticeship/general/registration.shtm"
+					},
+					"Active Trades": {
+						"href": "http://labor.ny.gov/apprenticeship/general/occupations.shtm"
+					},
+					"Current Recruitments": {
+						"href": "http://labor.ny.gov/pressreleases/apprenticeshiparchive.shtm"
+					}
+				},{
+					"Career Development": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/careerservices/planyourcareer/planningyourcareerindex.shtm"
+					},
+					"CareerZone": {
+						"href": "http://careerzone.ny.gov/"
+					},
+					"JobZone": {
+						"href": "http://jobzone.ny.gov/"
+					},
+					"Occupational Licenses and Certifications": {
+						"href": "http://labor.ny.gov/stats/lstrain.shtm"
+					},
+					"Resumes": {
+						"href": "http://labor.ny.gov/careerservices/findajob/res_fun.shtm"
+					},
+					"Training": {
+						"href": "http://labor.ny.gov/careerservices/planyourcareer/training.shtm"
+					}
+				},{
+					"Youth": {
+						"header": true
+					},
+					"Information Portal": {
+						"href": "http://labor.ny.gov/youth"
+					},
+					"Child Labor Law": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/workprot/minors.shtm"
+					},
+					"Child Performer": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/secure/child_index.shtm"
+					},
+					"Working Papers": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/workprot/wphmpg.shtm"
+					}
+				},{
+					"Labor Statistics": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/stats/index.shtm"
+					},
+					"Current Employment Statistics": {
+						"href": "http://labor.ny.gov/stats/enys_index.shtm"
+					},
+					"Growing Occupations": {
+						"href": "http://labor.ny.gov/stats/demand.asp"
+					},
+					"Monthly Jobs Press Release": {
+						"href": "http://labor.ny.gov/stats/pressreleases/pruistat.shtm"
+					},
+					"Occupational Wages": {
+						"href": "http://labor.ny.gov/stats/lswage2.asp"
+					}
+				}]
+			},
+			"Unemployment": {
+				"children": [{
+					"Online Services": {
+						"header": true
+					},
+					"Check Payment History": {
+						"href": "https://applications.labor.ny.gov/Individual/"
+					},
+					"Claim Weekly Benefits": {
+						"href": "https://applications.labor.ny.gov/Individual/"
+					},
+					"File a Claim": {
+						"href": "https://applications.labor.ny.gov/Individual/"
+					},
+					"Print 1099": {
+						"href": "https://applications.labor.ny.gov/Individual/"
+					},
+					"Register for Direct Deposit": {
+						"href": "https://applications.labor.ny.gov/Individual/"
+					},
+					"Reset PIN": {
+						"href": "https://applications.labor.ny.gov/Individual/"
+					}
+				},{
+					"Important Links": {
+						"header": true
+					},
+					"Benefits Calculator": {
+						"href": "http://labor.ny.gov/ui/claimantinfo/UIBenefitsCalculator.shtm"
+					},
+					"Extended Benefits": {
+						"href": "http://labor.ny.gov/ui/claimantinfo/ExtendedBenefits.shtm"
+					},
+					"Report Fraud": {
+						"href": "http://labor.ny.gov/agencyinfo/report-fraud.shtm"
+					},
+					"Unemployment Assistance": {
+						"href": "http://labor.ny.gov/apprenticeship/general/registration.shtm"
+					}
+				},{
+					"Important Documents": {
+						"header": true
+					},
+					"Claimant Handbook": {
+						"href": "http://labor.ny.gov/ui/claimantinfo/Claimant%20Handbook%20-%20Languages.shtm"
+					},
+					"Forms and Publications": {
+						"href": "http://labor.ny.gov/formsdocs/ui/claimant-forms-and-publications.shtm"
+					},
+					"Frequently Asked Questions": {
+						"href": "http://labor.ny.gov/ui/faq.shtm"
+					},
+					"Unemployment Insurance and Strikes": {
+						"href": "http://labor.ny.gov/formsdocs/ui/P802.pdf"
+					}
+				}]
+			},
+			"Workers": {
+				"children": [{
+					"Wages/Breaks": {
+						"header": true
+					},
+					"Breaks": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/employer/meals.shtm"
+					},
+					"Minimum Wage": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/workprot/minwage.shtm"
+					},
+					"Overtime": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/faq.shtm#4"
+					},
+					"Required Posters": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/employer/posters.shtm"
+					},
+					"Wage Rates": {
+						"href": "http://labor.ny.gov/stats/lswage2.asp"
+					}
+				},{
+					"Public Work": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PWContents.shtm"
+					},
+					"Article 8 - Construction": {
+						"href": "http://wpp.labor.state.ny.us/wpp/publicViewPWChanges.do?method=showIt"
+					},
+					"Article 9 - Building Services": {
+						"href": "http://wpp.labor.state.ny.us/wpp/publicViewPWChangesArt9.do?method=showIt"
+					}
+				},{
+					"Equal Opportunity": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/equal-opportunity/index.shtm"
+					},
+					"File a Discrimination Complaint": {
+						"href": "http://labor.ny.gov/equal-opportunity/how-to-file-a-discrimination-claim.shtm"
+					}
+				}]
+			},
+			"Veterans": {
+				"children": [{
+					"Veterans' Services" : {
+						"href": "http://labor.ny.gov/vets/vetintropage.shtm"
+					}
+				}]
+			},
+			"Immigrants": {
+				"children": [{
+					"Division of Immigrant Policies and Affairs" : {
+						"href": "http://labor.ny.gov/immigrants/index.shtm"
+					}
+				}]
+			},
+			"Legal Updates": {
+				"children": [{
+					"Legal Updates" :{
+						"href": "http://labor.ny.gov/legal/legal-updates.shtm"
+					}
+				}]
+			}
+
+		}
+	}
+}

@@ -1,0 +1,214 @@
+{
+	"Other Information": {
+		"href": "http://labor.ny.gov",
+		"children": {
+			"About Us": {
+				"children": [{
+					"About Labor": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/about/index.shtm"
+					},
+					"Our History": {
+						"href": "http://labor.ny.gov/about/history.shtm"
+					},
+					"Our Services": {
+						"href": "http://labor.ny.gov/about/services.shtm"
+					}
+				},{
+					"Contact Us": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/secure/contact"
+					},
+					"File Discrimination Complaint": {
+						"href": "http://labor.ny.gov/equal-opportunity/how-to-file-a-discrimination-claim.shtm"
+					},
+					"FOIL Request": {
+						"href": "http://labor.ny.gov/secure/foilrequest.shtm"
+					},
+					"Report Fraud": {
+						"href": "http://labor.ny.gov/agencyinfo/report-fraud.shtm"
+					},
+					"WARN Notice": {
+						"href": "http://labor.ny.gov/workforcenypartners/warn/warnportal.shtm"
+					}
+				}]
+			},
+			"Divisions": {
+				"children": [{
+					"Divisions": {
+						"header": true
+					},
+					"Employment & Workforce Solutions": {
+						"href": "http://labor.ny.gov/dews-index.shtm"
+					},
+					"Equal Opportunity": {
+						"href": "http://labor.ny.gov/equal-opportunity/index.shtm"
+					},
+					"Immigrant Policies & Affairs": {
+						"href": "http://labor.ny.gov/immigrants/index.shtm"
+					},
+					"Legal": {
+						"href": "http://labor.ny.gov/legal/index.shtm"
+					},
+					"Planning & Technology": {
+						"href": "http://labor.ny.gov/information-technology/index.shtm"
+					},
+					"Research & Statistics": {
+						"href": "http://labor.ny.gov/stats/index.shtm"	
+					},
+					"Unemployment Insurance": {
+						"href": "http://labor.ny.gov/ui/faq.shtm"
+					},
+					"Worker Protection": {
+						"href": "http://labor.ny.gov/workerprotection/wp_index.shtm"
+					}
+				},{
+					"Department FAQs": {
+						"header": true
+					},
+					"Wages & Hours": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/faq.shtm"
+					},
+					"Legal": {
+						"href": "http://labor.ny.gov/legal/frequently-asked-questions.shtm"
+					},
+					"Prevailing Wage/Public Work": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PW_faq1.shtm"
+					},
+					"Safety and Health": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/faq.shtm"
+					},
+					"Unemployment (Claimants)": {
+						"href": "http://labor.ny.gov/ui/faq.shtm"
+					},
+					"Unemployment (Employers)": {
+						"href": "http://labor.ny.gov/ui/employerinfo/frequently-requested-information.shtm"
+					}
+				},{
+					"Newsroom": {
+						"header": true
+					},
+					"Monthly Press Release - Local Area Unemployment Rates": {
+						"href": "http://labor.ny.gov/stats/pressreleases/prlaus.shtm"
+					},
+					"Monthly Press Release - Statewide Jobs Data": {
+						"href": "http://labor.ny.gov/stats/pressreleases/pruistat.shtm"
+					},
+					"Press Releases & Public Notices": {
+						"href": "http://labor.ny.gov/pressreleases/pressreleases.shtm"
+					}
+				}]
+			},
+			"Boards and Councils": {
+				"children": [{
+					"Employment Relations Board": {
+						"href": "http://labor.ny.gov/erb/index.shtm"
+					},
+					"Hazard Abatement Board": {
+						"href": "http://labor.ny.gov/hab/index.htm"
+					},
+					"Industrial Board of Appeals": {
+						"href": "http://labor.ny.gov/iba/index.asp"
+					},
+					"Local Workforce Investment Boards": {
+						"href": "http://www.labor.ny.gov/workforcenypartners/lwia.shtm"
+					},
+					"Safety and Health": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/DOSH_BOARDS.shtm"
+					},
+					"State Workforce Investment Board": {
+						"href": "http://labor.ny.gov/workforce/swib/SWIBAbout.shtm"	
+					},
+					"Unemployment Insurance Appeal Board": {
+						"href": "http://labor.ny.gov/ui-appeal"
+					}
+				}]
+			},
+			"Forms &amp; Publications": {
+				"children": [{
+					"Apprenticeship": {
+						"href": "http://labor.ny.gov/apprenticeship/apprenticeship-forms-and-publications.shtm"
+					},
+					"Business Services": {
+						"href": "http://labor.ny.gov/businessservices/buisness-services-forms-and-publications.shtm"
+					},
+					"Career Services": {
+						"href": "http://labor.ny.gov/careerservices/career-services-forms-and-publications.shtm"
+					},
+					"Employment Work/Labor Standards": {
+						"href": "http://labor.ny.gov/formsdocs/wp/ellsformsandpublications.shtm"
+					},
+					"Equal Opportunity": {
+						"href": "http://labor.ny.gov/formsdocs/DEOD/deodformsandpublications.shtm"
+					}
+				},{
+					"Immigrant Policies &amp; Affairs": {
+						"href": "http://labor.ny.gov/immigrants/forms-and-docs.shtm"
+					},
+					"Prevailing Wage/Public Work": {
+						"href": "http://labor.ny.gov/formsdocs/wp/pwformsandpublications.shtm"
+					},
+					"Safety and Health Documents": {
+						"href": "http://labor.ny.gov/formsdocs/wp/shformsandpublications.shtm"
+					},
+					"Unemployment (Businesses)": {
+						"href": "http://labor.ny.gov/formsdocs/ui/employer-forms-publications.shtm"
+					},
+					"Unemployment (Claimants)": {
+						"href": "http://labor.ny.gov/formsdocs/ui/claimant-forms-and-publications.shtm"
+					}
+				}, {
+					"Legal Updates": {
+						"href": "http://labor.ny.gov/legal/legal-updates.shtm"
+					}
+				}]
+			},
+			"Initiatives": {
+				"children": [{
+					"Apprenticeship": {
+						"href": "http://www.labor.ny.gov/apprenticeship/general/registration.shtm"
+					},
+					"Green Jobs": {
+						"href": "http://www.greencareersny.com/"
+					}
+				},{
+					"CareerZone": {
+						"href": "http://careerzone.ny.gov/"
+					},
+					"JobZone": {
+						"href": "http://jobzone.ny.gov/"
+					}
+				},{
+					"Ride Safe NY": {
+						"href": "http://ridesafeny.com/"
+					}
+				},{
+					"Shared Work": {
+						"href": "http://labor.ny.gov/ui/employerinfo/shared-work-program.shtm"
+					}
+				},{
+					"Youth Portal": {
+						"href":  "http://labor.ny.gov/youth"
+					}
+				}]
+			},
+			"Workforce Professionals": {
+				"children": [ {
+					"One-Stop Career Centers": {
+						"href": "http://labor.ny.gov/workforcenypartners/osview.asp"
+					}, 
+					"Programs and Tools" :{
+						"href": "http://labor.ny.gov/workforcenypartners/tools.shtm"
+					},
+					"Training and Events" :{
+						"href": "http://labor.ny.gov/workforcenypartners/training-events.shtm"
+					}
+				}]
+			}
+		}
+	}
+}

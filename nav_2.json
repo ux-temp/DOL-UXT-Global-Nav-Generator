@@ -1,0 +1,255 @@
+{
+	"Businesses": {
+		"href": "http://labor.ny.gov",
+		"children": {
+			"Unemployment Insurance": {
+				"children": [{
+					"Employer Overview": {
+						"href": "http://labor.ny.gov/ui/employer.shtm"
+					},
+					"Unemployment Insurance Online Services": {
+						"href": "http://labor.ny.gov/ui/Authentication/index.shtm"
+					},
+					"Registering": {
+						"href": "http://labor.ny.gov/ui/employerinfo/registering-for-unemployment-insurance.shtm"
+					}
+				},{
+					"Interest Assessment Surcharge": {
+						"href": "http://labor.ny.gov/ui/employerinfo/interest-assessment-surcharge.shtm"
+					},
+					"Quarterly Reporting": {
+						"href": "http://labor.ny.gov/ui/employerinfo/quarterly-reporting.shtm"
+					}
+				},{
+					"Tax Rate Information": {
+						"href": "http://labor.ny.gov/ui/employerinfo/tax-rate-information.shtm"
+					},
+					"Forms and Publications": {
+						"href": "http://labor.ny.gov/formsdocs/ui/employer-forms-publications.shtm"
+					}
+				},{
+					"The Shared Work Program": {
+						"href": "http://labor.ny.gov/ui/employerinfo/shared-work-program.shtm"
+					},
+					"Report Fraud": {
+						"href": "http://labor.ny.gov/agencyinfo/report-fraud.shtm"
+					}
+				}]
+			},
+			"Recruitment Services": {
+				"children": [{
+					"Recruitment Services": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/businessservices/lookforworkers/lookingforworkersIndex.shtm"
+					},
+					"Career Fairs and Recruitments": {
+						"href": "http://labor.ny.gov/businessservices/job-fairs.shtm"
+					},
+					"Place a Job Order": {
+						"href": "http://labor.ny.gov/businessservices/services/perm.shtm"
+					}
+				},{
+					"Manage Your Workforce": {
+						"header": true
+					},
+					"Consultation Services": {
+						"href": "http://labor.ny.gov/businessservices/services/servicesindex.shtm"
+					},
+					"Foreign Agricultural Labor": {
+						"href": "http://labor.ny.gov/immigrants/index.shtm"
+					},
+					"Funding Opportunities": {
+						"href": "http://labor.ny.gov/businessservices/funding.shtm"
+					},
+					"Eligible Training Providers": {
+						"href": "https://applications.labor.ny.gov/ETPL/"
+					}
+				},{
+					"Hiring Incentives": {
+						"header": true
+					},
+					"Federal Bonding Program": {
+						"href": "http://labor.ny.gov/businessservices/services/fbp.shtm"
+					},
+					"On-the-Job Training": {
+						"href": "http://labor.ny.gov/businessservices/ojt.shtm"
+					},
+					"Work Opportunity Tax Credit": {
+						"href": "http://labor.ny.gov/businessservices/edsu/edsu%20wotc.shtm"
+					},
+					"NY Youth Works Program": {
+						"href": "http://www.labor.ny.gov/careerservices/youth-tax-credit.shtm"
+					}
+				},{
+					"Apprenticeship": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/apprenticeship/appsponsor.shtm"
+					},
+					"Active Sponsors List": {
+						"href": "http://labor.ny.gov/apprenticeship/sponsor/index.asp"
+					},
+					"Apprenticeship and Training Council": {
+						"href": "http://labor.ny.gov/apprenticeship/atc.shtm"
+					},
+					"Deregistered/Closed Programs": {
+						"href": "http://labor.ny.gov/apprenticeship/activesponsorlist.shtm#dereg"
+					},
+					"Laws and Regulations": {
+						"href": "http://labor.ny.gov/apprenticeship/general/lawsandregs.shtm"	
+					},
+					"Programs Pending Approval": {
+						"href": "http://labor.ny.gov/apprenticeship/pending-approval.shtm"
+					}
+				}]
+			},
+			"Labor Statistics": {
+				"children": [{
+					"Overview": {
+						"href": "http://labor.ny.gov/stats/index.shtm"
+					},
+					"Affirmative Action Data": {
+						"href": "http://labor.ny.gov/stats/lseeo.shtm"
+					},
+					"Occupational Wages": {
+						"href": "http://labor.ny.gov/stats/lswage2.asp"
+					}
+				}]
+			},
+			"Labor Law": {
+				"children": [{
+					"Overview": {
+						"href": "http://labor.ny.gov/legal/index.shtm"
+					},
+					"Adjudication Decisions": {
+						"href": "http://labor.ny.gov/legal/adjudication-decisions.shtm"
+					},
+					"Child Labor": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/workprot/minors.shtm"
+					},
+					"FOIL Requests": {
+						"href": "http://labor.ny.gov/secure/foilrequest.shtm"
+					},
+					"Legal Frequently Asked Questions": {
+						"href": "http://labor.ny.gov/legal/frequently-asked-questions.shtm"
+					}
+				},{
+					"Legal Opinions": {
+						"href": "http://labor.ny.gov/legal/counsel-opinion-letters.shtm"
+					},
+					"Legal Updates": {
+						"href": "http://labor.ny.gov/legal/legal-updates.shtm"	
+					},
+					"Public Work - General Provisions": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PWGeneralProvisions.shtm"
+					},
+					"WARN Notices": {
+						"href": "http://labor.ny.gov/workforcenypartners/warn/warnportal.shtm"
+					}
+				}]
+			},
+			"Worker Protection": {
+				"children": [{
+					"Labor Standards": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/labor_standards.shtm"
+					},
+					"Apparel Industry": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/garment.shtm"
+					},
+					"Farm Labor": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/farm_labor.shtm"
+					},
+					"Immigrants and Non-English Speakers": {
+						"href": "http://labor.ny.gov/immigrants/index.shtm"
+					},
+					"Licenses, Permits, Certifications": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/wpcpu.shtm"
+					},
+					"Required Posters": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/employer/posters.shtm"
+					}
+				},{
+					"Safety &amp; Health": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/DOSH_INDEX.shtm"
+					},
+					"Boards and Councils": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/DOSH_BOARDS.shtm"
+					},
+					"Codes and Regulations": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/DOSH_CODE_RULES.shtm"
+					},
+					"Special Programs": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/DOSH_PROGRAMS.shtm"
+					},
+					"Workplace Violence Prevention": {
+						"href": "http://labor.ny.gov/workerprotection/safetyhealth/workplaceviolence.shtm "
+					}
+				},{
+					"Wages/Breaks": {
+						"header": true
+					},
+					"Breaks": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/employer/meals.shtm"
+					},
+					"Minimum Wage": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/workprot/minwage.shtm"
+					},
+					"Overtime": {
+						"href": "http://labor.ny.gov/workerprotection/laborstandards/faq.shtm#4"
+					},
+					"Wage Rates": {
+						"href": "http://labor.ny.gov/stats/lswage2.asp"
+					}
+				},{
+					"Public Work": {
+						"header": true
+					},
+					"Overview": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PWContents.shtm"
+					},
+					"Article 8 - Construction": {
+						"href": "http://wpp.labor.state.ny.us/wpp/publicViewPWChanges.do?method=showIt"
+					},
+					"Article 9 - Building Services": {
+						"href": "http://wpp.labor.state.ny.us/wpp/publicViewPWChangesArt9.do?method=showIt"
+					},
+					"Debarred List": {
+						"href": "http://labor.ny.gov/workerprotection/publicwork/PWDebarmentInformation.shtm"
+					}
+				}]
+			},
+			"Online Services": {
+				"children": [{
+					"Asbestos Notifications": {
+						"href": "https://wps.labor.state.ny.us/WPS_Curam/en/WPEmployer_ExternalhomePage.do"
+					},
+					"Register for Unemployment Insurance (NYS-100)": {
+						"href": "https://applications.labor.ny.gov/eRegWeb/"
+					},
+					"Unemployment Insurance Online Services": {
+						"href": "http://labor.ny.gov/ui/Authentication/index.shtm"
+					},
+					"File a Quarterly Report (NYS-45)": {
+						"href": "http://labor.ny.gov/ui/Authentication/index.shtm"
+					}
+				}]
+			},
+			"Immigrants": {
+				"children": [{
+					"Division of Immigrant Policies and Affairs" : {
+						"href": "http://labor.ny.gov/immigrants/index.shtm"
+					}
+				}]
+			}
+		}
+	}
+}
