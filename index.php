@@ -64,16 +64,78 @@
 
             // Get the JSON file
             $jsonContents = file_Get_contents($filename);
-			echo( $jsonContents );
+			//echo( $jsonContents );
             // Turn the JSON into a php array.
             $jsonArray[$i] = json_decode($jsonContents,true); 
 		} 
 	}
+	//print_r($jsonArray[0]);
 	// create and append the nav to the page.
 //$compiled = createNav($jsonArray, 0);
 //$compiledNav = $compiledNav + $compiled;
-	
+	processArray ( $jsonArray, "");
 
+	function processArray ( $inputArray, $oOptions) {
+		$dlevel1 = 0;
+		foreach ( $inputArray as $topLevelItem ) {
+			echo ( "<br/>".key($topLevelItem) );
+			foreach ( $topLevelItem as $topLevelAttr ) {
+				echo ("|L". $dlevel1);
+				
+				print_r ( key( $topLevelAttr) );
+				print_r( $topLevelAttr["href"] ."<br/>" );
+				
+				
+				if ( array_key_exists("children", $topLevelAttr) ) {
+					//print_r($topLevelAttr["children"]);
+				
+					$dlevel2 = 0;
+					foreach ( $topLevelAttr["children"] as $secondLevelArray ) {
+						echo ("|L".$dlevel1.".".$dlevel2);
+						echo (key($secondLevelArray));
+						
+						print_r ( $secondLevelArray[children]  );
+						
+						
+						foreach ( $secondLevelArray as $secondLevelItem ){
+							echo key( $secondLevelItem[0] );
+							
+							echo( "<br />" );
+						}
+						/*
+						foreach ( $secondLevelItem["children"] as $thirdLevelItem ) {
+							echo ( key($thirdLevelItem) );
+							print_r($thirdLevelItem );
+							if (array_key_exists("header", $topLevelAttr) ){
+								echo ( "header".$topLevelAttr["header"] );
+							} else if(array_key_exists("href", $topLevelAttr) ) {
+								echo ( "href".$topLevelAttr["href"]);
+							}
+							
+						}*/
+						
+						/*
+						foreach( $thirdLevelArray["children"] as $thirdLevelItem ); {
+								echo ( "k".key($thirdLevelItem) );
+								foreach ($thirdLevelItem as $thirdLevelVal ) {
+									echo ( key ( $thirdLevelVal) );
+									echo ( "<br />" );
+								}
+						}*/
+						$dlevel2++;
+					}
+				}
+				
+			}
+			$dlevel1++;
+		}
+		
+		$children = "";
+		return $children;
+	}
+	
+	
+	
 	// This function is used to create a nav
 	function createNav($ary, $cLvl) {
 
