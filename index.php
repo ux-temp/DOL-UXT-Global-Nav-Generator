@@ -77,24 +77,35 @@
 
 	function processArray ( $inputArray, $oOptions) {
 		$dlevel1 = 0;
-		foreach ( $inputArray as $topLevelItem ) {
-			echo ( "<br/>".key($topLevelItem) );
-			foreach ( $topLevelItem as $topLevelAttr ) {
-				echo ("|L". $dlevel1);
-				
-				print_r ( key( $topLevelAttr) );
+		foreach ( $inputArray as $topLevel) {
+			echo ( "<br/>".key($topLevel) );
+			foreach ( $topLevel as $topLevelAttr ) {
+				//echo (" | ". $dlevel1);
+				echo (" | ");
+				print_r ( key( $topLevelAttr) ."=");
 				print_r( $topLevelAttr["href"] ."<br/>" );
 				
 				
 				if ( array_key_exists("children", $topLevelAttr) ) {
-					//print_r($topLevelAttr["children"]);
-				
+					echo ( key($topLevelAttr["children"]) ."<br />" );
+					
 					$dlevel2 = 0;
+					foreach ( $topLevelAttr["children"] as $secondLevel) {
+						foreach ( $secondLevel as $secondLevelItem)
+						print_r($secondLevelItem[0]);
+						
+						echo("<br/>");
+					}
+					
+					
+					
+					
+					/*
 					foreach ( $topLevelAttr["children"] as $secondLevelArray ) {
 						echo ("|L".$dlevel1.".".$dlevel2);
 						echo (key($secondLevelArray));
 						
-						print_r ( $secondLevelArray[children]  );
+						print_r ( $secondLevelArray["children"]  );
 						
 						
 						foreach ( $secondLevelArray as $secondLevelItem ){
@@ -112,7 +123,7 @@
 								echo ( "href".$topLevelAttr["href"]);
 							}
 							
-						}*/
+						}
 						
 						/*
 						foreach( $thirdLevelArray["children"] as $thirdLevelItem ); {
@@ -121,9 +132,10 @@
 									echo ( key ( $thirdLevelVal) );
 									echo ( "<br />" );
 								}
-						}*/
+						}
 						$dlevel2++;
-					}
+					}*/
+					
 				}
 				
 			}
