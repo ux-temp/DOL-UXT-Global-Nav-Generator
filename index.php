@@ -15,71 +15,72 @@
 	// Variable to hold message if any.
 	$errorMsg = "";
 
+	if(isset($_GET["nav"])) {
 
-	if (gettype($_GET["nav"]) == "string") {
+		if (gettype($_GET["nav"]) == "string") {
 
-		$jsonFiles = $_GET["nav"];
+			$jsonFiles = $_GET["nav"];
 
-		// Check to see if there are multiple files.
-		if (strpos($jsonFiles, ',') !== false) { 
+			// Check to see if there are multiple files.
+			if (strpos($jsonFiles, ',') !== false) { 
 
-			// Split the items on the comma
-			$files = explode(',', $jsonFiles);
+				// Split the items on the comma
+				$files = explode(',', $jsonFiles);
 
-			foreach ($files as $file) {
-			
-				$filename =  $file . ".json";
+				foreach ($files as $file) {
+				
+					$filename =  $file . ".json";
+
+					// Check to see if this file exists!
+					if (file_exists($filename)) {
+
+						// Get file contents
+						$jsonContents = file_Get_contents($filename);
+
+						$jsonArrayTemp = json_decode($jsonContents,true);
+
+						// We need to combind the json into one large json.
+						$jsonArray = array_replace_recursive($jsonArray, $jsonArrayTemp);
+
+					} else {
+
+						// Error out here at some point.
+
+					}
+
+				}
+
+
+			} else {
+
+				// Create the full filename
+				$filename =  $jsonFiles . ".json";
 
 				// Check to see if this file exists!
 				if (file_exists($filename)) {
 
-					// Get file contents
 					$jsonContents = file_Get_contents($filename);
 
-					$jsonArrayTemp = json_decode($jsonContents,true);
-
-					// We need to combind the json into one large json.
-					$jsonArray = array_replace_recursive($jsonArray, $jsonArrayTemp);
-
-				} else {
-
-					// Error out here at some point.
+					$jsonArray = json_decode($jsonContents,true);
 
 				}
 
 			}
 
+			// Create the html menu output
+			$generatedNav = createNav($jsonArray, 0); 
+
 
 		} else {
 
-			// Create the full filename
-			$filename =  $jsonFiles . ".json";
+			$error = true;
 
-			// Check to see if this file exists!
-			if (file_exists($filename)) {
+			// Standard error, used did no provide a file name in a parameter
+			$errorNum = 1;
 
-				$jsonContents = file_Get_contents($filename);
-
-				$jsonArray = json_decode($jsonContents,true);
-
-			}
-
+			// Error out. The user did not declare the nav parameter or the file to look for.
+			$errorMsg = '<p class="ux-msg error">You must declare the navigation json file you want generated with the "nav" parameter.</p>';
 		}
-
-		// Create the html menu output
-		$generatedNav = createNav($jsonArray, 0); 
-
-
-	} else {
-
-		$error = true;
-
-		// Standard error, used did no provide a file name in a parameter
-		$errorNum = 1;
-
-		// Error out. The user did not declare the nav parameter or the file to look for.
-		$errorMsg = '<p class="ux-msg error">You must declare the navigation json file you want generated with the "nav" parameter.</p>';
-
 	}
 
 
@@ -437,7 +438,8 @@
 
 					<?php
 
-						if (($error == "true" && $errorNum == 1) || ($error == 0 && $_GET["nav"] != "")) {
+						//if (($error == "true" && $errorNum == 1) || ($error == 0 && isset($_GET["nav"]) && $_GET["nav"] != "")) {
+						if (!$error) {
 
 					?>
 
@@ -449,7 +451,18 @@
 
 							<label for="filename">
 								<span>JSON Filename</span>
-								<input id="filename" name="nav" value="<?php print($_GET["nav"]); ?>" />
+								<?php
+									if (isset($_GET["nav"])) {
+								?>
+									<input id="filename" name="nav" value="<?php print($_GET["nav"]); ?>" />
+								<?php
+								} else {
+								?>
+									<input id="filename" name="nav" />
+								<?php
+								}
+								?>
+
 							</label>
 
 							<input type="submit" value="Generate" class="button primary no-icon" />
@@ -467,7 +480,7 @@
 
 						//nl2br($test);
 
-						if ($_GET["nav"]) {
+						if (isset($_GET["nav"])) {
 							?>
 
 <textarea style="margin:35px 0 0 0;height:500px;" wrap="off">
