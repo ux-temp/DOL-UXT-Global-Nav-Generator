@@ -104,6 +104,9 @@
 
 		} else {
 
+			$tabs = $cLvl + 2;
+			$tabIndent = "";
+
 			// Check to see what the current level the navigation is on and make the correct class.
 			if ($cLvl == 1) {
 
@@ -114,26 +117,27 @@
 
 				$divClass = "outer-sub-nav-2";
 				$navClass = " group";
-
+				$tabs += 3;
 			}
-
-			$tabs = $cLvl + 2;
-			$tabIndent = "";
 
 			for ($i = 0; $i < $tabs; $i++) {
 				$tabIndent .= "\t";
 			}
 
-			$newNav = $tabIndent . "<div class=\"sub-nav " . $divClass . "\">\n" . $tabIndent . "\t<nav class=\"container_16 ux-content" . $navClass . "\">\n";
+			if ($cLvl == 1) {
+				$newNav = $tabIndent . "<div class=\"sub-nav " . $divClass . "\">\n" . $tabIndent . "\t<nav class=\"container_16 ux-content" . $navClass . "\">\n";
+			} else {
+				$newNav = $tabIndent . "<div class=\"sub-nav " . $divClass . "\">\n" . $tabIndent . "\t<nav class=\"container_16 ux-content" . $navClass . "\">\n";
+			}
 
 			if (!isAssoc($ary)) {
 
 				foreach ($ary as &$column) {
-					$newNav .= $tabIndent . "\t\t<div class=\"menu-column\">\n" . buildList($column, $cLvl, 4) . $tabIndent . "\t\t</div>\n";
+					$newNav .= $tabIndent . "\t\t<div class=\"menu-column\">\n" . buildList($column, $cLvl, 7) . $tabIndent . "\t\t</div>\n";
 				}
 
 			} else {
-				$newNav .= buildList($ary, $cLvl);
+				$newNav .= buildList($ary, $cLvl, 3);
 			}	
 
 			$newNav .= $tabIndent . "\t</nav>\n" . $tabIndent . "</div>\n";
