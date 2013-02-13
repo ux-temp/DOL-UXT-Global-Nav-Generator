@@ -1,8 +1,10 @@
-
 <?php
 
-	// Variable to store the compiled menu
-	$compiledNav = "";
+	// Variable to store the generated menu
+	$generatedNav = "";
+
+	// JSONs Array - This array will contain all the declared json files that will be decoded and parsed
+	$jsonArray = array();
 
 	// Error state variable
 	$error = false;
@@ -12,36 +14,60 @@
 
 	// Variable to hold message if any.
 	$errorMsg = "";
-/*
-	// Check to see if there is a parameter of the json to parse.
+
+
 	if (gettype($_GET["nav"]) == "string") {
 
-		$origFilename = $_GET["nav"];
+		$jsonFiles = $_GET["nav"];
 
-		//print('<p>Navigation file declared!</p>');
-		$filename = $origFilename . ".json";
+		// Check to see if there are multiple files.
+		if (strpos($jsonFiles, ',') !== false) { 
 
-		// Check to see if the file exists in the document root
-		if (file_exists($filename)) {
+			// Split the items on the comma
+			$files = explode(',', $jsonFiles);
 
-            // Get the JSON file
-            $jsonContents = file_Get_contents($filename);
+			foreach ($files as $file) {
+			
+				$filename =  $file . ".json";
 
-            // Turn the JSON into a php array.
-            $jsonArray = json_decode($jsonContents,true);
+				// Check to see if this file exists!
+				if (file_exists($filename)) {
 
-            // create and append the nav to the page.
-            $compiledNav = createNav($jsonArray, 0);
+					// Get file contents
+					$jsonContents = file_Get_contents($filename);
+
+					$jsonArrayTemp = json_decode($jsonContents,true);
+
+					// We need to combind the json into one large json.
+					$jsonArray = array_replace_recursive($jsonArray, $jsonArrayTemp);
+
+				} else {
+
+					// Error out here at some point.
+
+				}
+
+			}
 
 
 		} else {
 
-			$error = true;
+			// Create the full filename
+			$filename =  $jsonFiles . ".json";
 
-			// Error out saying it cant file the json file in the project root.
-			$errorMsg = '<p class="ux-msg error">There is no data file in the directory with the name of: "' . $filename .'".json</p>';
+			// Check to see if this file exists!
+			if (file_exists($filename)) {
+
+				$jsonContents = file_Get_contents($filename);
+
+				$jsonArray = json_decode($jsonContents,true);
+
+			}
 
 		}
+
+		// Create the html menu output
+		$generatedNav = createNav($jsonArray, 0); 
 
 
 	} else {
@@ -54,102 +80,9 @@
 		// Error out. The user did not declare the nav parameter or the file to look for.
 		$errorMsg = '<p class="ux-msg error">You must declare the navigation json file you want generated with the "nav" parameter.</p>';
 
-	}*/
-	
-	
-	$jsonArray[] = array();
-	for ($i=0; $i<5; $i++) {
-		$filename = "nav_".$i.".json";
-		if (file_exists($filename)) {
-
-            // Get the JSON file
-            $jsonContents = file_Get_contents($filename);
-			//echo( $jsonContents );
-            // Turn the JSON into a php array.
-            $jsonArray[$i] = json_decode($jsonContents,true); 
-		} 
 	}
-	//print_r($jsonArray[0]);
-	// create and append the nav to the page.
-//$compiled = createNav($jsonArray, 0);
-//$compiledNav = $compiledNav + $compiled;
-	processArray ( $jsonArray, "");
 
-	function processArray ( $inputArray, $oOptions) {
-		$dlevel1 = 0;
-		foreach ( $inputArray as $topLevel) {
-			echo ( "<br/>".key($topLevel) );
-			foreach ( $topLevel as $topLevelAttr ) {
-				//echo (" | ". $dlevel1);
-				echo (" | ");
-				print_r ( key( $topLevelAttr) ."=");
-				print_r( $topLevelAttr["href"] ."<br/>" );
-				
-				
-				echo (buildList($topLevel, 1));
-				
-				/*if ( array_key_exists("children", $topLevelAttr) ) {
-					echo ( key($topLevelAttr["children"]) ."<br />" );
-					
-					$dlevel2 = 0;
-					foreach ( $topLevelAttr["children"] as $secondLevel) {
-						foreach ( $secondLevel as $secondLevelItem)
-						//print_r($secondLevelItem[]);
-						
-						echo("<br/>");
-					}
-					
-					
-					
-					
-					/*
-					foreach ( $topLevelAttr["children"] as $secondLevelArray ) {
-						echo ("|L".$dlevel1.".".$dlevel2);
-						echo (key($secondLevelArray));
-						
-						print_r ( $secondLevelArray["children"]  );
-						
-						
-						foreach ( $secondLevelArray as $secondLevelItem ){
-							echo key( $secondLevelItem[0] );
-							
-							echo( "<br />" );
-						}
-						/*
-						foreach ( $secondLevelItem["children"] as $thirdLevelItem ) {
-							echo ( key($thirdLevelItem) );
-							print_r($thirdLevelItem );
-							if (array_key_exists("header", $topLevelAttr) ){
-								echo ( "header".$topLevelAttr["header"] );
-							} else if(array_key_exists("href", $topLevelAttr) ) {
-								echo ( "href".$topLevelAttr["href"]);
-							}
-							
-						}
-						
-						/*
-						foreach( $thirdLevelArray["children"] as $thirdLevelItem ); {
-								echo ( "k".key($thirdLevelItem) );
-								foreach ($thirdLevelItem as $thirdLevelVal ) {
-									echo ( key ( $thirdLevelVal) );
-									echo ( "<br />" );
-								}
-						}
-						$dlevel2++;
-					}*/
-					
-				//}*/
-				
-			}
-			$dlevel1++;
-		}
-		
-		$children = "";
-		return $children;
-	}
-	
-	
-	
+
 	// This function is used to create a nav
 	function createNav($ary, $cLvl) {
 
@@ -162,12 +95,12 @@
 			$appID = (is_multi($ary) ? 'id="app-nav"' : '');
 
 			// Create the outer wrapper
-			$newNav = '<nav class="container_16 ux-content"' . $appID . '>';
+			$newNav = "<nav class=\"container_16 ux-content\"" . $appID . ">\n";
 
 			// Call the build list function that will create the individual task items
 			$newNav .= buildList($ary, $cLvl);
 
-			$newNav .= '</nav>';
+			$newNav .= "</nav>\n";
 
 		} else {
 
@@ -184,19 +117,26 @@
 
 			}
 
-			$newNav = '<div class="sub-nav ' . $divClass . '"><nav class="container_16 ux-content' . $navClass .'">';
+			$tabs = $cLvl + 2;
+			$tabIndent = "";
+
+			for ($i = 0; $i < $tabs; $i++) {
+				$tabIndent .= "\t";
+			}
+
+			$newNav = $tabIndent . "<div class=\"sub-nav " . $divClass . "\">\n" . $tabIndent . "\t<nav class=\"container_16 ux-content" . $navClass . "\">\n";
 
 			if (!isAssoc($ary)) {
 
 				foreach ($ary as &$column) {
-					$newNav .= '<div class="menu-column">' . buildList($column, $cLvl) . '</div>';
+					$newNav .= $tabIndent . "\t\t<div class=\"menu-column\">\n" . buildList($column, $cLvl, 4) . $tabIndent . "\t\t</div>\n";
 				}
 
 			} else {
 				$newNav .= buildList($ary, $cLvl);
 			}	
 
-			$newNav .= '</nav></div>';
+			$newNav .= $tabIndent . "\t</nav>\n" . $tabIndent . "</div>\n";
 
 		}
 
@@ -206,30 +146,41 @@
 	}
 
 	// This function us used to create unorder listes and any sub containers as needed.
-	function buildList($ary, $cLvl) {
+	function buildList($ary, $cLvl, $tabLvl = 0) {
+
+		// Determine the amount to indent
+		$tabs = $cLvl + 1;
+		$tabIndent = "";
+
+		if (is_numeric($tabLvl)) {
+			$tabs += $tabLvl;
+		}
+
+		for ($i = 0; $i < $tabs; $i++) {
+			$tabIndent .= "\t";
+		}
+
 
 		// Create a new unordered list
-		$list = '<ul>';
+		$list = $tabIndent . "<ul>\n";
 
 		// Loop through the navigation items
 		foreach ($ary as $key => $val) {
 
-			//print($key);
-
 			// For each nav item creat a new list item
-			$item = '<li>';
+			$item = $tabIndent . "\t" . "<li>\n";
 
 			// Determine the name of the link by checking for the "text" property of the current object.
 			$itemName = (array_key_exists("text", $val) ? $val["text"] : $key);
 
 			if (array_key_exists("header", $val)) {
 
-				$item .= '<strong ' . buildAttr($val, false) . '>' . $itemName . '</strong>';
+				$item .= $tabIndent . "\t" . "\t" . '<strong ' . buildAttr($val, false) . '>' . $itemName . "</strong>\n";
 
 			} else {
 
 				// Create the anchor rage.
-				$item .= '<a ' . buildAttr($val, true) . '>' . $itemName . '</a>';
+				$item .= $tabIndent . "\t" . "\t" . '<a ' . buildAttr($val, true) . '>' . $itemName . "</a>\n";
 
 				// Check to see if a sub navigation needs to be created.
 				if (array_key_exists("children", $val)) {
@@ -238,7 +189,7 @@
 
 			}
 
-			$item .= '</li>';
+			$item .= $tabIndent . "\t" . "</li>\n";
 
 			// Add item to the list variable
 			$list .= $item;
@@ -246,7 +197,7 @@
 		}
 
 
-		$list .= "</ul>";
+		$list .= $tabIndent . "</ul>\n";
 
 		// Retern the completed list
 		return $list;
@@ -303,9 +254,7 @@
 		return false;
 
 	}
-
 ?>
-
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -439,7 +388,7 @@
 
 				<?php
 					if (!$error) {
-						print($compiledNav);
+						print($generatedNav);
 					}
 				?>
 			</div>
@@ -484,7 +433,7 @@
 
 					<?php
 
-						if (($error == "true" && $errorNum == 1) || ($error == 0 && $origFilename != "")) {
+						if (($error == "true" && $errorNum == 1) || ($error == 0 && $_GET["nav"] != "")) {
 
 					?>
 
@@ -496,17 +445,32 @@
 
 							<label for="filename">
 								<span>JSON Filename</span>
-								<input id="filename" name="nav" value="<?php print($origFilename); ?>" />
+								<input id="filename" name="nav" value="<?php print($_GET["nav"]); ?>" />
 							</label>
 
 							<input type="submit" value="Generate" class="button primary no-icon" />
 
 						</form>
 
-
 					<?php
 						} else {
 							print($errorMsg);
+						}   
+
+						// Preform a string replace
+						//$test = str_replace('><ul>',">\n<ul>", $generatedNav);
+						//$test = str_replace('><li>',">\n<li>", $test);
+
+						//nl2br($test);
+
+						if ($_GET["nav"]) {
+							?>
+
+<textarea style="margin:35px 0 0 0;height:500px;" wrap="off">
+<?php print($generatedNav); ?>
+</textarea>
+
+							<?php
 						}
 
 					?>
@@ -526,5 +490,3 @@
 		</footer>
 		<script src="http://labor.ny.gov/css/apps/v.0.4.8/js/ux-script.min.js"></script>
 	</body>
-</html>
-
