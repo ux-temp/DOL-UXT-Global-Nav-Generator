@@ -86,13 +86,15 @@
 				print_r( $topLevelAttr["href"] ."<br/>" );
 				
 				
-				if ( array_key_exists("children", $topLevelAttr) ) {
+				echo (buildList($topLevel, 1));
+				
+				/*if ( array_key_exists("children", $topLevelAttr) ) {
 					echo ( key($topLevelAttr["children"]) ."<br />" );
 					
 					$dlevel2 = 0;
 					foreach ( $topLevelAttr["children"] as $secondLevel) {
 						foreach ( $secondLevel as $secondLevelItem)
-						print_r($secondLevelItem[0]);
+						//print_r($secondLevelItem[]);
 						
 						echo("<br/>");
 					}
@@ -136,7 +138,7 @@
 						$dlevel2++;
 					}*/
 					
-				}
+				//}*/
 				
 			}
 			$dlevel1++;
